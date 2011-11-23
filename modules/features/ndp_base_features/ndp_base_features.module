@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the NDP Base features feature.
+ */
+
+include_once('ndp_base_features.features.inc');

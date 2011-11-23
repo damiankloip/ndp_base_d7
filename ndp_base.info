@@ -31,6 +31,7 @@ dependencies[] = views
 ; DEV
 dependencies[] = devel
 dependencies[] = strongarm
+dependencies[] = features
 
 files[] = ndp_base.profile
 

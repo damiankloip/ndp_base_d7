@@ -4,10 +4,10 @@
  * Implements hook_install().
  */
 function ndp_base_install() {
-	/*$modules = array(
-		'admin_menu_toolbar',
+	$modules = array(
+		'ndp_base_features',
 	);
 
-	module_enable($modules, TRUE);*/
+	module_enable($modules, TRUE);
 
 }
