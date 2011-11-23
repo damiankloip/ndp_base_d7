@@ -38,11 +38,14 @@ function ndp_base_modules() {
 /**
  * Implementation of hook_form_alter().
  */
-function system_form_install_configure_form_alter(&$form, $form_state, $form_id) {
-	$form['admin_account']['account']['name']['#default_value'] = 'admin';
+function ndp_base_form_install_configure_form_alter(&$form, $form_state) {
+	print_r($form['admin_account']);
+	$form['admin_account']['account']['name']['#default_value'] = 'JOHN';
+ 	$form['admin_account']['account']['mail']['#default_value'] = '';
 	$form['site_information']['site_name']['#default_value'] = $_SERVER['SERVER_NAME'];
-  $form['site_information']['site_mail']['#default_value'] = 'webmaster@' . $_SERVER['SERVER_NAME'];
-  $form['admin_account']['account']['mail']['#default_value'] = 'admin@' . $_SERVER['SERVER_NAME'];
+  $form['site_information']['site_mail']['#default_value'] = '';
+	$form['server_settings']['site_default_country']['#default_value'] = 'GB';
+	$form['server_settings']['date_default_timezone']['#default_value'] = 'Europe/London';
 }
 
 /**
