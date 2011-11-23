@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function ndp_base_install() {
+	/*$modules = array(
+		'admin_menu_toolbar',
+	);
+
+	module_enable($modules, TRUE);*/
+
+}
