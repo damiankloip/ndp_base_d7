@@ -19,9 +19,9 @@ projects[pathauto][subdir] = "contrib"
 
 ; Devel
 
-projects[devel][subdir] = "dev"
-projects[masquerade][subdir] = "dev"
-projects[strongarm][subdir] = "dev"
+;projects[devel][subdir] = "dev"
+;projects[masquerade][subdir] = "dev"
+;projects[strongarm][subdir] = "dev"
 
 
 ; Theme
