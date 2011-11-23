@@ -40,7 +40,7 @@ function ndp_base_modules() {
  */
 function ndp_base_form_install_configure_form_alter(&$form, $form_state) {
 	print_r($form['admin_account']);
-	$form['admin_account']['account']['name']['#default_value'] = 'JOHN';
+	$form['admin_account']['account']['name']['#default_value'] = 'admin';
  	$form['admin_account']['account']['mail']['#default_value'] = '';
 	$form['site_information']['site_name']['#default_value'] = $_SERVER['SERVER_NAME'];
   $form['site_information']['site_mail']['#default_value'] = '';
