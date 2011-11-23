@@ -26,7 +26,7 @@ projects[strongarm][subdir] = "dev"
 
 ; Theme
 
-projects[ndp_starter_theme][type] = "theme"
-projects[ndp_starter_theme][download][type] = "git"
-projects[ndp_starter_theme][download][url] = "git@github.com:/newdigitalpartnership/ndp_starter_theme"
-projects[ndp_starter_theme][download][branch] = "7.x-stable"
+;projects[ndp_starter_theme][type] = "theme"
+;projects[ndp_starter_theme][download][type] = "git"
+;projects[ndp_starter_theme][download][url] = "git@github.com:/newdigitalpartnership/ndp_starter_theme"
+;projects[ndp_starter_theme][download][branch] = "7.x-stable"
