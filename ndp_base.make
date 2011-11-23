@@ -7,10 +7,10 @@ api = "2"
 projects[admin_menu][subdir] = "contrib"
 ;projects[admin_menu][version] = "3.0"
 
-projects[ctools][subdir] = "contrib"
+;projects[ctools][subdir] = "contrib"
 projects[ctools][destination] = "sites/all/modules"
 
-projects[views][subdir] = "contrib"
+;projects[views][subdir] = "contrib"
 projects[views][destination] = "sites/all/modules"
 
 projects[rules][subdir] = "contrib"

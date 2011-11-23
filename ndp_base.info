@@ -1,5 +1,5 @@
-name = NDP base
-description = NDP base installation profile for Drupal 7
+name = NDP Base
+description = NDP Base installation profile for Drupal 7
 version = 1.0
 core = 7.x
 
