@@ -80,7 +80,7 @@ function _ndp_base_core_install() {
   filter_format_save($full_html_format);
 
   // Enable some standard blocks.
-  $default_theme = variable_get('theme_default', 'bartik');
+  $default_theme = variable_get('theme_default', 'ndp_base');
   $admin_theme = 'seven';
   $values = array(
     array(
