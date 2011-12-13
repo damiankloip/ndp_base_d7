@@ -440,12 +440,18 @@ function _ndp_base_core_install() {
     ->condition('type', 'theme')
     ->condition('name', 'seven')
     ->execute();
+
   // set variables for admin theme.
   variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
-  
-  // Enable NDP base theme.
-  theme_enable('ndp_base');
+    
+  // Enable ndp base theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', 'ndp_base')
+    ->execute();
+
   variable_set('theme_default', 'ndp_base');
 
 }
