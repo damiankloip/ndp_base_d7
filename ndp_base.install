@@ -81,7 +81,7 @@ function _ndp_base_core_install() {
 
   // Enable some standard blocks.
   $default_theme = variable_get('theme_default', 'ndp_base');
-  $admin_theme = 'seven';
+  $admin_theme = variable_get('admin_theme', 'seven');
   $values = array(
     array(
       'module' => 'system',
@@ -443,4 +443,9 @@ function _ndp_base_core_install() {
   // set variables for admin theme.
   variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
+  
+  // Enable NDP base theme.
+  theme_enable('ndp_base');
+  variable_set('theme_default', 'ndp_base');
+
 }
