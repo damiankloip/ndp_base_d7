@@ -17,7 +17,7 @@ function ndp_base_features_strongarm() {
   $strongarm->name = 'clean_url';
   $strongarm->value = '1';
   $export['clean_url'] = $strongarm;
-  
+
   // Date/time general settings.
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -39,6 +39,28 @@ function ndp_base_features_strongarm() {
   $strongarm->name = 'site_default_country';
   $strongarm->value = 'GB';
   $export['site_default_country'] = $strongarm;
+  
+  // Custom date format defaults.
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_long';
+  $strongarm->value = 'l, jS F Y';
+  $export['date_format_long'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_medium';
+  $strongarm->value = 'jS F Y';
+  $export['date_format_medium'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_short';
+  $strongarm->value = 'd/m/Y';
+  $export['date_format_short'] = $strongarm;
 
   // Admin menu variables.
   $strongarm = new stdClass;

@@ -222,6 +222,12 @@ function _ndp_base_date_formats() {
       'locked' => 0,
       'is_new' => TRUE,
     ),
+    array(
+      'type' => 'short',
+      'format' => 'd/m/Y',
+      'locked' => 0,
+      'is_new' => TRUE,
+    ),
   );
   // Save custom formats.
   foreach ($date_formats as $date_format) {
