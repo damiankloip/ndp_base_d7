@@ -81,7 +81,7 @@ function _ndp_base_core_install() {
   filter_format_save($full_html_format);
 
   // Enable some standard blocks.
-  /*$default_theme = variable_get('theme_default', 'ndp_base');
+  $default_theme = variable_get('theme_default', 'basic');
   $admin_theme = variable_get('admin_theme', 'seven');
   $values = array(
     array(
@@ -99,7 +99,7 @@ function _ndp_base_core_install() {
   foreach ($values as $record) {
     $query->values($record);
   }
-  $query->execute();*/
+  $query->execute();
 
   // Insert default pre-defined node types into the database. For a complete
   // list of available node type attributes, refer to the node type API
@@ -346,8 +346,8 @@ function _ndp_base_core_install() {
   db_update('system')
     ->fields(array('status' => 1))
     ->condition('type', 'theme')
-    ->condition('name', 'ndp_base')
+    ->condition('name', 'basic')
     ->execute();
 
-  variable_set('theme_default', 'ndp_base');
+  variable_set('theme_default', 'basic');
 }
