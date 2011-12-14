@@ -16,26 +16,6 @@ function ndp_base_profile_details() {
 }
 
 /**
- * Implements hook_ctools_plugin_api().
- */
-function ndp_base_ctools_plugin_api($module, $api) {
-  if ($module == 'strongarm' && $api == 'strongarm') {
-    return array('version' => 1);
-  }
-}
-
-/**
- *
- */
-function ndp_base_modules() {
-	$modules = array(
-		
-	);
-	
-	return $modules;
-}
-
-/**
  * Implementation of hook_form_alter().
  */
 function ndp_base_form_install_configure_form_alter(&$form, $form_state) {
