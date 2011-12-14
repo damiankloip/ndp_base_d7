@@ -28,6 +28,9 @@ dependencies[] = admin_menu_toolbar
 dependencies[] = ctools
 dependencies[] = views
 dependencies[] = captcha
+dependencies[] = ckeditor
+dependencies[] = imce
+dependencies[] = imce_mkdir
 
 ; DEV
 dependencies[] = devel
