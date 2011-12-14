@@ -81,8 +81,8 @@ function _ndp_base_core_install() {
   filter_format_save($full_html_format);
 
   // Enable some standard blocks.
-  $default_theme = variable_get('theme_default', 'basic');
-  $admin_theme = variable_get('admin_theme', 'seven');
+  $default_theme = 'ndp_base';
+  $admin_theme = 'seven';
   $values = array(
     array(
       'module' => 'system',
@@ -346,8 +346,8 @@ function _ndp_base_core_install() {
   db_update('system')
     ->fields(array('status' => 1))
     ->condition('type', 'theme')
-    ->condition('name', 'basic')
+    ->condition('name', 'ndp_base')
     ->execute();
 
-  variable_set('theme_default', 'basic');
+  variable_set('theme_default', 'ndp_base');
 }
