@@ -39,7 +39,7 @@ function ndp_base_modules() {
  * Implementation of hook_form_alter().
  */
 function ndp_base_form_install_configure_form_alter(&$form, $form_state) {
-	print_r($form['admin_account']);
+	//print_r($form['admin_account']);
 	$form['admin_account']['account']['name']['#default_value'] = 'admin';
  	$form['admin_account']['account']['mail']['#default_value'] = '';
 	$form['site_information']['site_name']['#default_value'] = $_SERVER['SERVER_NAME'];
@@ -51,7 +51,17 @@ function ndp_base_form_install_configure_form_alter(&$form, $form_state) {
 /**
  * Implements hook_install_tasks().
  */
-function ndp_base_install_tasks() {
+function ndp_base_install_tasks(&$install_state) {
+
+  $tasks = array(
+    'ndp_base_feature_form' => array(
+      'display_name' => st('NDP Base features'),
+      'type' => 'form',
+    ),
+  );
+  
+  return $tasks;
+
 /*
 Return an array of tasks to be performed by an installation profile.
 
@@ -95,4 +105,11 @@ A keyed array of tasks the profile will perform during the final stage of the in
     'function' Normally this does not need to be set, but it can be used to force the installer to call a different function when the task is run (rather than the function whose name is given by the array key). This could be used, for example, to allow the same function to be called by two different tasks.
 */
 
+}
+
+/**
+ * Form callback set in hook_install_tasks().
+ */
+function ndp_base_feature_form() {
+	// FORM HERE..
 }
