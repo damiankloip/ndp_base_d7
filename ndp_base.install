@@ -214,11 +214,13 @@ function _ndp_base_date_formats() {
       'type' => 'long',
       'format' => 'l, jS F Y',
       'locked' => 0,
+      'is_new' => TRUE,
     ),
     array(
       'type' => 'medium',
       'format' => 'jS F Y',
       'locked' => 0,
+      'is_new' => TRUE,
     ),
   );
   // Save custom formats.
