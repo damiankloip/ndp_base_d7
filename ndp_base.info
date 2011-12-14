@@ -25,18 +25,19 @@ dependencies[] = rdf
 ;CONTRIB
 dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
-dependencies[] = ctools
-dependencies[] = views
 dependencies[] = captcha
 dependencies[] = ckeditor
+dependencies[] = ctools
+dependencies[] = date_popup_authored
 dependencies[] = imce
 dependencies[] = imce_mkdir
-dependencies[] = date_popup_authored
+dependencies[] = views
+dependencies[] = webform
 
 ; DEV
 dependencies[] = devel
-dependencies[] = strongarm
 dependencies[] = features
+dependencies[] = strongarm
 
 files[] = ndp_base.profile
 
