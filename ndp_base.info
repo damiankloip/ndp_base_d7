@@ -27,6 +27,7 @@ dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
 dependencies[] = ctools
 dependencies[] = views
+dependencies[] = captcha
 
 ; DEV
 dependencies[] = devel

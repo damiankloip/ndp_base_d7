@@ -14,6 +14,7 @@ function ndp_base_install() {
 function _ndp_base_modules_enable() {
 	$modules = array(
 		'ndp_base_features',
+    'imce_ckeditor_settings',
 	);
 	module_enable($modules, TRUE);
 

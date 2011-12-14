@@ -10,8 +10,8 @@
  */
 function ndp_base_profile_details() {
 	return array(
-		'name' => 'NDP Base',
-		'description' => 'NDP Base installation profile for Drupal 7',
+		'name' => "NDP Base",
+		'description' => "NDP Base installation profile for Drupal 7",
 	);
 }
 
@@ -35,7 +35,7 @@ function ndp_base_install_tasks(&$install_state) {
 
   $tasks = array(
     'ndp_base_feature_form' => array(
-      'display_name' => st('NDP Base features'),
+      'display_name' => st("NDP Base features"),
       'type' => 'form',
     ),
   );
