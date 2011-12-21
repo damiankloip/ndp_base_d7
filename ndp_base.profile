@@ -31,7 +31,7 @@ function ndp_base_form_install_configure_form_alter(&$form, $form_state) {
 /**
  * Implements hook_install_tasks().
  */
-function ndp_base_install_tasks(&$install_state) {
+/*function ndp_base_install_tasks(&$install_state) {
 
   $tasks = array(
     'ndp_base_feature_form' => array(
@@ -90,6 +90,6 @@ A keyed array of tasks the profile will perform during the final stage of the in
 /**
  * Form callback set in hook_install_tasks().
  */
-function ndp_base_feature_form() {
+/*function ndp_base_feature_form() {
 	// FORM HERE..
-}
+}*/
