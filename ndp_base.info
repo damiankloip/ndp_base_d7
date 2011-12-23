@@ -26,7 +26,6 @@ dependencies[] = rdf
 dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
 dependencies[] = captcha
-dependencies[] = ckeditor
 dependencies[] = ctools
 dependencies[] = date
 dependencies[] = date_popup_authored
