@@ -85,7 +85,7 @@ A keyed array of tasks the profile will perform during the final stage of the in
     'function' Normally this does not need to be set, but it can be used to force the installer to call a different function when the task is run (rather than the function whose name is given by the array key). This could be used, for example, to allow the same function to be called by two different tasks.
 */
 
-}
+//}
 
 /**
  * Form callback set in hook_install_tasks().

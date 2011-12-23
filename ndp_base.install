@@ -10,12 +10,13 @@ function ndp_base_install() {
 }
 
 /**
- * Helper function to enable additional modules in hook_install().
+ * Helper function to enable additional modules (Features). After dependency modules.
  */
 function _ndp_base_modules_enable() {
 	$modules = array(
 		'ndp_base_features',
-    'imce_ckeditor_settings',
+    'imce_settings',
+    'wysiwyg_ckeditor_profiles',
 	);
 	module_enable($modules, TRUE);
 

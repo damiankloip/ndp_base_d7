@@ -28,11 +28,14 @@ dependencies[] = admin_menu_toolbar
 dependencies[] = captcha
 dependencies[] = ckeditor
 dependencies[] = ctools
+dependencies[] = date
 dependencies[] = date_popup_authored
 dependencies[] = imce
 dependencies[] = imce_mkdir
 dependencies[] = views
+dependencies[] = views_ui
 dependencies[] = webform
+dependencies[] = wysiwyg
 
 ; DEV
 dependencies[] = devel
