@@ -60,7 +60,7 @@ function _ndp_base_core_install() {
   $full_html_format = array(
     'format' => 'full_html',
     'name' => 'Full HTML',
-    'weight' => 1,
+    'weight' => -2,
     'filters' => array(
       // URL filter.
       'filter_url' => array(
@@ -81,12 +81,12 @@ function _ndp_base_core_install() {
   );
   $full_html_format = (object) $full_html_format;
   filter_format_save($full_html_format);
-  
+
   // Admin html format with no wysiwyg settings.
   $admin_html_format = array(
     'format' => 'admin_html',
-    'name' => 'Full admin HTML',
-    'weight' => 1,
+    'name' => 'Full HTML (No editor)',
+    'weight' => -1,
     'filters' => array(
       'filter_url' => array(
         'weight' => 0,
