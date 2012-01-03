@@ -53,7 +53,7 @@ function wysiwyg_ckeditor_profiles_filter_default_formats() {
     'name' => 'Full HTML',
     'cache' => '1',
     'status' => '1',
-    'weight' => '-1',
+    'weight' => '-2',
     'filters' => array(
       'filter_url' => array(
         'weight' => '0',
