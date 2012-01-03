@@ -3,7 +3,7 @@
 /**
  * Implements hook_enable().
  */
-function_ndp_base_features_enable() {
+function ndp_base_features_enable() {
   /**
    * Create node/1 for starter template.
    */
