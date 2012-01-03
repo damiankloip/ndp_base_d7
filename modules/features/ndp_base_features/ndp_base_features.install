@@ -18,9 +18,9 @@ function ndp_base_features_enable() {
   $node->status = 1;
 
   $node->body[$node->language][] = array(
-    'value' = $body_text,
-    'summary' = text_summary($body_text),
-    'format' = 'full_html',
+    'value' => $body_text,
+    'summary' => text_summary($body_text),
+    'format' => 'full_html',
   );
 
   $path = 'home';
