@@ -60,7 +60,7 @@ function _ndp_base_core_install() {
   $full_html_format = array(
     'format' => 'full_html',
     'name' => 'Full HTML',
-    'weight' => -2,
+    'weight' => -10,
     'filters' => array(
       // URL filter.
       'filter_url' => array(
