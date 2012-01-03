@@ -106,7 +106,7 @@ function _ndp_base_core_install() {
   filter_format_save($admin_html_format);
 
   // Enable some standard blocks.
-  $default_theme = 'bartik';
+  $default_theme = 'main7';
   $admin_theme = 'seven';
   $values = array(
     array(
@@ -223,10 +223,10 @@ function _ndp_base_core_install() {
   db_update('system')
     ->fields(array('status' => 1))
     ->condition('type', 'theme')
-    ->condition('name', 'bartik')
+    ->condition('name', 'main7')
     ->execute();
 
-  variable_set('theme_default', 'bartik');
+  variable_set('theme_default', 'main7');
 }
 
 /**
