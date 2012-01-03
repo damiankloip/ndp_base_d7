@@ -13,7 +13,7 @@ function ndp_base_features_enable() {
   $node->type = 'page';
   node_object_prepare($node);
 
-  $node->title    = 'Home';
+  $node->title = 'Home';
   $node->language = LANGUAGE_NONE;
   $node->status = 1;
 

@@ -61,6 +61,16 @@ function ndp_base_features_strongarm() {
   $strongarm->name = 'date_format_short';
   $strongarm->value = 'd/m/Y';
   $export['date_format_short'] = $strongarm;
+  
+  // Page node type options
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_page';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+  $export['node_options_page'] = $strongarm;
 
   // Admin menu variables.
   $strongarm = new stdClass;
