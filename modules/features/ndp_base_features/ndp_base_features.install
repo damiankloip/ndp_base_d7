@@ -7,7 +7,7 @@ function ndp_base_features_enable() {
   /**
    * Create node/1 for starter template.
    */
-  $body_text = "<p>New node body text in here or from file?</p>";
+  /*$body_text = "<p>New node body text in here or from file?</p>";
 
   $node = new stdClass();
   $node->type = 'page';
@@ -26,5 +26,5 @@ function ndp_base_features_enable() {
   $path = 'home';
   $node->path = array('alias' => $path);
 
-  node_save($node);
+  node_save($node);*/
 }
