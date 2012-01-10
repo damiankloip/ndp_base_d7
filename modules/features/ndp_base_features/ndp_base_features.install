@@ -3,7 +3,7 @@
 /**
  * Implements hook_install().
  */
-function ndp_base_install() {
+function ndp_base_features_install() {
   // Add modified settings for default bam profile into db.
   db_update('backup_migrate_profiles')
     ->condition('profile_id', 'default', '=')
