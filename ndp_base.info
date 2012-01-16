@@ -32,6 +32,7 @@ dependencies[] = honeypot
 dependencies[] = imce
 dependencies[] = imce_mkdir
 dependencies[] = imce_wysiwyg
+dependencies[] = less
 dependencies[] = linkit
 dependencies[] = pathauto
 dependencies[] = token
