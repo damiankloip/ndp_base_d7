@@ -17,6 +17,7 @@ function _ndp_base_modules_enable() {
 		'ndp_base_features',
     'imce_settings',
     'wysiwyg_ckeditor_profiles',
+    'ndp_contrib_settings'
 	);
 	module_enable($modules, TRUE);
 

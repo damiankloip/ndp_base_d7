@@ -31,6 +31,9 @@ function wysiwyg_ckeditor_profiles_wysiwyg_default_profiles() {
           'Outdent' => 1,
           'Indent' => 1,
         ),
+        'linkit' => array(
+          'linkit' => 1,
+        ),
       ),
       'toolbar_loc' => 'top',
       'toolbar_align' => 'left',
@@ -91,6 +94,9 @@ function wysiwyg_ckeditor_profiles_wysiwyg_default_profiles() {
         ),
         'imce' => array(
           'imce' => 1,
+        ),
+        'linkit' => array(
+          'linkit' => 1,
         ),
       ),
       'toolbar_loc' => 'top',
