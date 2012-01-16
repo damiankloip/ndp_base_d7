@@ -1,9 +1,13 @@
+/*
+ * Installation/usage
+ */
+
 Run the following terminal command once the site files have been downloaded.
 Do this in the root of the new site directory.
 
 drush site-install ndp_base --db-url=mysql://username:pass@localhost/databasename
 
-additional paramaters:
+additional paramaters (can be found from 'drush site-install --help'):
 
  --db-url    A Drupal 5/6 style database URL. Only required for initial install - not re-install.                                               
  --db-prefix  An optional table prefix to use for initial install.                                                                               
@@ -16,5 +20,5 @@ additional paramaters:
  --site-mail   From: for system mailings. Defaults to admin@example.com                                                                           
  --sites-subdir   Name of directory under 'sites' which should be created. Only needed when the subdirectory does not already exist. Defaults to 'default'  
 
-drupal 7.9 bug with header generation (cache) see issue http://drupal.org/node/1314392
-Download drupal 7.x-dev verison until 7.10 is released. - FIXED
+(drupal 7.9 bug with header generation (cache) see issue http://drupal.org/node/1314392
+Download drupal 7.x-dev verison until 7.10 is released. - FIXED)

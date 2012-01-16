@@ -135,6 +135,14 @@ function ndp_contrib_settings_strongarm() {
   $strongarm->name = 'honeypot_time_limit';
   $strongarm->value = '5';
   $export['honeypot_time_limit'] = $strongarm;
+  
+  // LESS variables
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'less_devel';
+  $strongarm->value = 1;
+  $export['less_devel'] = $strongarm;
 
   return $export;
 }
