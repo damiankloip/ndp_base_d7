@@ -34,6 +34,7 @@ dependencies[] = imce_mkdir
 dependencies[] = imce_wysiwyg
 dependencies[] = less
 dependencies[] = linkit
+dependencies[] = module_filter
 dependencies[] = pathauto
 dependencies[] = token
 dependencies[] = views
