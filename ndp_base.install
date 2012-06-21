@@ -19,8 +19,8 @@ function _ndp_base_modules_enable() {
     'wysiwyg_ckeditor_profiles',
     'ndp_contrib_settings'
 	);
-	module_enable($modules, TRUE);
 
+	module_enable($modules, TRUE);
 }
 
 /**

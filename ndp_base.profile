@@ -10,8 +10,8 @@
  */
 function ndp_base_profile_details() {
 	return array(
-		'name' => "NDP Base",
-		'description' => "NDP Base installation profile for Drupal 7",
+		'name' => 'NDP Base',
+		'description' => 'NDP Base installation profile for Drupal 7.',
 	);
 }
 
