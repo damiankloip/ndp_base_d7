@@ -24,6 +24,7 @@ dependencies[] = rdf
 ;CONTRIB
 dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
+dependencies[] = admin_views
 dependencies[] = backup_migrate
 dependencies[] = ctools
 dependencies[] = date
@@ -32,7 +33,6 @@ dependencies[] = honeypot
 dependencies[] = imce
 dependencies[] = imce_mkdir
 dependencies[] = imce_wysiwyg
-dependencies[] = less
 dependencies[] = linkit
 dependencies[] = module_filter
 dependencies[] = pathauto
