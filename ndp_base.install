@@ -227,7 +227,8 @@ function _ndp_base_core_install() {
     ->condition('name', 'main7')
     ->execute();
 
-  variable_set('theme_default', 'main7');
+  // Set the default site theme.
+  variable_set('theme_default', 'mainmodern');
 }
 
 /**
