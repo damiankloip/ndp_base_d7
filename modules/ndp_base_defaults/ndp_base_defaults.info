@@ -1,0 +1,6 @@
+name = NDP base defaults
+description = NDP base profile general default configuration.
+core = 7.x
+package = NDP
+version = "7.x-1.0"
+hidden = TRUE
