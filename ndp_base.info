@@ -42,6 +42,7 @@ dependencies[] = pathologic
 dependencies[] = token
 dependencies[] = views
 dependencies[] = views_ui
+dependencies[] = views_bulk_operations
 dependencies[] = webform
 dependencies[] = wysiwyg
 dependencies[] = xmlsitemap
