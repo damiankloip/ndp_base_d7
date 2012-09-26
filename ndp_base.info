@@ -38,6 +38,7 @@ dependencies[] = linkchecker
 dependencies[] = linkit
 dependencies[] = module_filter
 dependencies[] = pathauto
+dependencies[] = pathologic
 dependencies[] = token
 dependencies[] = views
 dependencies[] = views_ui
