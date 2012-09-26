@@ -29,6 +29,17 @@ class NDPBaseWebTestCase extends DrupalWebTestCase {
   }
 
   /**
+   * General test for variables.
+   */
+  function testVariables() {
+    // File variables.
+    $this->assertIdenticalVariable('file_default_scheme', 'public');
+    $this->assertIdenticalVariable('file_private_path', 'sites/default/files/private');
+    $this->assertIdenticalVariable('file_public_path', 'sites/default/files');
+    $this->assertIdenticalVariable('file_temporary_path', '/tmp');
+  }
+
+  /**
    * Test the theme for the profile installation.
    */
   public function testTheme() {
@@ -82,7 +93,7 @@ class NDPBaseWebTestCase extends DrupalWebTestCase {
   /**
    * Tests the custom date formats.
    */
-  public function testDateFormat() {
+  public function testDateFormats() {
     $expected_formats = array(
       array(
         'type' => 'long',
@@ -126,7 +137,7 @@ class NDPBaseWebTestCase extends DrupalWebTestCase {
       '@expected' => $expected_value,
       '@actual' => $actual_value,
     );
-    $message = format_string('Variable: @variable => @expected is correct', $tokens);
+    $message = format_string('Variable: @variable => "@expected" is correct', $tokens);
 
     $this->assertIdentical($expected_value, $actual_value, $message);
   }
