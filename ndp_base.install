@@ -5,7 +5,7 @@
  */
 function ndp_base_install() {
 	_ndp_base_modules_enable();
-	_ndp_base_core_install();
+	_ndp_base_install();
   _ndp_base_date_formats();
 }
 
@@ -24,7 +24,7 @@ function _ndp_base_modules_enable() {
 /**
  * Copied from standard profile hook_install() function.
  */
-function _ndp_base_core_install() {
+function _ndp_base_install() {
   // Add text formats.
   $filtered_html_format = array(
     'format' => 'filtered_html',
@@ -222,7 +222,7 @@ function _ndp_base_core_install() {
 }
 
 /**
- * Insert custom date formats.
+ * Inserts custom date formats.
  */
 function _ndp_base_date_formats() {
   $date_formats = array(
