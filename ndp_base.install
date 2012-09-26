@@ -109,9 +109,9 @@ function _ndp_base_install() {
   $admin_html_format = (object) $admin_html_format;
   filter_format_save($admin_html_format);
 
+  $default_theme = 'mainmodern';
+
   // Enable some standard blocks.
-  $default_theme = 'main7';
-  $admin_theme = 'seven';
   $values = array(
     array(
       'module' => 'system',
@@ -165,23 +165,6 @@ function _ndp_base_install() {
     rdf_mapping_save($rdf_mapping);
   }
 
-  // Default "Basic page" to not be promoted and have comments disabled.
-  variable_set('node_options_page', array('status'));
-  variable_set('comment_page', COMMENT_NODE_HIDDEN);
-
-  // Don't display date and author information for "Page" nodes by default.
-  variable_set('node_submitted_page', FALSE);
-
-  // Enable user picture support and set the default to a square thumbnail option.
-  variable_set('user_pictures', '1');
-  variable_set('user_picture_dimensions', '1024x1024');
-  variable_set('user_picture_file_size', '800');
-  variable_set('user_picture_style', 'thumbnail');
-
-  // Allow visitor account creation with administrative approval.
-  variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
-
-
   // Enable default permissions for system roles.
   $filtered_html_permission = filter_permission_name($filtered_html_format);
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', 'access comments', $filtered_html_permission));
@@ -211,19 +194,18 @@ function _ndp_base_install() {
     ->condition('name', 'seven')
     ->execute();
 
-  // set variables for admin theme.
+  // set the admin theme.
   variable_set('admin_theme', 'seven');
-  variable_set('node_admin_theme', '1');
 
   // Enable ndp base theme.
   db_update('system')
-    ->fields(array('status' => 1))
+    ->fields(array('status' => TRUE))
     ->condition('type', 'theme')
-    ->condition('name', 'main7')
+    ->condition('name', $default_theme)
     ->execute();
 
   // Set the default site theme.
-  variable_set('theme_default', 'mainmodern');
+  variable_set('theme_default', $default_theme);
 }
 
 /**

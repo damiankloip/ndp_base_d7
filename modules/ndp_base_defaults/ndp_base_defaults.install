@@ -64,33 +64,48 @@ function ndp_base_defaults_save_variables(array $map = array()) {
  */
 function _ndp_base_defaults_variable_map() {
   return array (
+    // Clean URL's.
     'clean_url' => '1',
+    // Date.
     'date_default_timezone' => 'Europe/London',
     'date_first_day' => '1',
     'site_default_country' => 'GB',
     'date_format_long' => 'l, jS F Y',
     'date_format_medium' => 'jS F Y',
     'date_format_short' => 'd/m/Y',
-    'node_options_page' => array (
-      0 => 'status',
-    ),
+    // Comment.
     'comment_anonymous_page' => 0,
     'comment_default_mode_page' => 1,
     'comment_default_per_page_page' => '50',
     'comment_form_location_page' => 1,
-    'comment_page' => '1',
+    'comment_page' => COMMENT_NODE_HIDDEN,
     'comment_preview_page' => '1',
     'comment_subject_field_page' => 1,
+    // Menu.
     'menu_options_page' => array (
       0 => 'main-menu',
     ),
     'menu_parent_page' => 'main-menu:0',
+    // Node.
+    // Default "Page" to not be promoted and have comments disabled.
+    'node_options_page' => array('status'),
     'node_preview_page' => '1',
-    'node_submitted_page' => 0,
+    // Don't display date and author information for "Page" nodes by default.
+    'node_submitted_page' => FALSE,
+    'node_admin_theme' => TRUE,
+    // File.
     'file_default_scheme' => 'public',
     'file_private_path' => 'sites/default/files/private',
     'file_public_path' => 'sites/default/files',
     'file_temporary_path' => '/tmp',
+    // User.
+    // Enable user picture support and set the default to a square thumbnail option.
+    'user_pictures' => TRUE,
+    'user_picture_dimensions' => '1024x1024',
+    'user_picture_file_size' => '800',
+    'user_picture_style' => 'thumbnail',
+    // Allow visitor account creation with administrative approval.
+    'user_register' => USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL,
   );
 }
 
