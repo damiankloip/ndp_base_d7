@@ -45,7 +45,6 @@ dependencies[] = wysiwyg
 
 ; DEV
 dependencies[] = devel
-dependencies[] = features
 
 files[] = ndp_base.profile
 
