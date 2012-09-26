@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * NDP base profile install file.
+ */
+
+/**
  * Implements hook_install().
  */
 function ndp_base_install() {

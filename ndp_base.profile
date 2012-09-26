@@ -2,7 +2,7 @@
 
 /**
  * @file
- * NDP Base D7 installation profile.
+ * NDP base profile file.
  */
 
 /**
