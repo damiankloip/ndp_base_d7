@@ -1,0 +1,6 @@
+name = NDP base core
+description = NDP base profile general module configuration
+core = 7.x
+package = NDP
+version = "7.x-1.0"
+hidden = TRUE
