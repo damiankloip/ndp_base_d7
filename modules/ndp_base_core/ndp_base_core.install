@@ -43,7 +43,7 @@ function ndp_base_core_bam_profile_install() {
  *   key => value.
  */
 function ndp_base_core_save_variables(array $map = array()) {
-  foreach ($map_ndp_base_core_variable_map() as $key => $value) {
+  foreach ($map as $key => $value) {
     variable_set($key, $value);
   }
 }
