@@ -59,11 +59,24 @@ class NDPBaseWebTestCase extends DrupalWebTestCase {
     // Test that user 1 has this role.
     $user = user_load(1);
     $this->assertTrue(in_array($role->rid, array_keys($user->roles)), 'User 1 has the admin role.');
-    // Test admin role have all permissions.
+    // Test admin role has all permissions.
     $all_perms = module_invoke_all('permission');
     $admin_perms = db_query("SELECT permission from {role_permission} WHERE rid = :rid", array(':rid' => $role->rid))->fetchAllKeyed(0, 0);
     // There should be no diff if all the same roles are present.
     $this->assertFalse(array_diff(array_keys($all_perms), array_keys($admin_perms)));
+  }
+
+  /**
+   * Tests node type creation and settings from the profile installation.
+   */
+  public function testNode() {
+    // Tests the page node type exists.
+    $page = node_type_load('page');
+    $this->assertTrue($page, 'Page node type loaded.');
+
+    // Test the body field.
+    $instance = field_info_instance('node', 'body', 'page');
+    $this->assertTrue($instance, 'Body field instance attached to page node type.');
   }
 
   /**

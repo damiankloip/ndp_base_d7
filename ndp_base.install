@@ -139,7 +139,7 @@ function _ndp_base_install() {
       'name' => st("Page"),
       'base' => 'node_content',
       'description' => st("Use <em>basic pages</em> for your static content, such as an 'About us' page."),
-      'custom' => 1,
+      'custom' => 0,
       'modified' => 1,
       'locked' => 0,
     ),
