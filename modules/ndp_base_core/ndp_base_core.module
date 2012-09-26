@@ -4,3 +4,12 @@
  * @file
  * NDP base core module file.
  */
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function ndp_base_core_ctools_plugin_api($module, $api) {
+  if ($module == 'linkit' && $api == 'linkit_profiles') {
+    return array('version' => 1);
+  }
+}
