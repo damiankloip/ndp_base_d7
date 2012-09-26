@@ -9,7 +9,7 @@
  */
 function ndp_base_features_strongarm() {
   $export = array();
-  
+
   // Clean URLS
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -39,7 +39,7 @@ function ndp_base_features_strongarm() {
   $strongarm->name = 'site_default_country';
   $strongarm->value = 'GB';
   $export['site_default_country'] = $strongarm;
-  
+
   // Custom date format defaults.
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -61,7 +61,7 @@ function ndp_base_features_strongarm() {
   $strongarm->name = 'date_format_short';
   $strongarm->value = 'd/m/Y';
   $export['date_format_short'] = $strongarm;
-  
+
   // Page node type options
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -150,7 +150,7 @@ function ndp_base_features_strongarm() {
   $strongarm->name = 'node_submitted_page';
   $strongarm->value = 0;
   $export['node_submitted_page'] = $strongarm;
-  
+
   // File system variables
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
