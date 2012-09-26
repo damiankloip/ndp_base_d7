@@ -33,6 +33,7 @@ dependencies[] = honeypot
 dependencies[] = imce
 dependencies[] = imce_mkdir
 dependencies[] = imce_wysiwyg
+dependencies[] = libraries
 dependencies[] = linkchecker
 dependencies[] = linkit
 dependencies[] = module_filter
