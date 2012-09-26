@@ -91,7 +91,7 @@ function _ndp_base_defaults_variable_map() {
 }
 
 /**
- * Returns an array of contrib module variables to set.
+ * Returns an array of general contrib module variables to set.
  *
  * @return array
  */
@@ -395,7 +395,11 @@ function ndp_base_defaults_wysiwyg_ckeditor_profiles() {
   foreach ($profiles as $profile) {
     $record = (object) $profile;
     $save = drupal_write_record('wysiwyg', $record);
-
+    // Log an entry in the watchdog if they have been saved.
+    if ($save) {
+      watchdog('ndp_base_defaults', t('WYSIWYG profile saved for @format format',
+        array('@format' => $record->format)));
+    }
   }
 
 }
