@@ -16,7 +16,6 @@ function ndp_base_install() {
 function _ndp_base_modules_enable() {
 	$modules = array(
 		'ndp_base_defaults',
-    'wysiwyg_ckeditor_profiles',
 	);
 
 	module_enable($modules, TRUE);
