@@ -14,7 +14,7 @@ function ndp_base_install() {
  */
 function _ndp_base_modules_enable() {
 	$modules = array(
-		'ndp_base',
+		'ndp_base_core',
     'imce_settings',
     'wysiwyg_ckeditor_profiles',
     'ndp_contrib_settings'
