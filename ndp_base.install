@@ -10,7 +10,8 @@ function ndp_base_install() {
 }
 
 /**
- * Helper function to enable additional modules (Features). After dependency modules.
+ * Helper function to enable additional configuration modules.
+ * Intentionally after dependency modules.
  */
 function _ndp_base_modules_enable() {
 	$modules = array(
