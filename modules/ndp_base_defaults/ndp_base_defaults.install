@@ -33,7 +33,7 @@ function ndp_base_defaults_bam_profile_install() {
     'append_timestamp' => 1,
     'timestamp_format' => 'Y-m-d\TH-i-s',
     'filters' => _ndp_base_defaults_default_bam_filter_settings(),
-  )
+  );
 
   $save = drupal_write_record('backup_migrate_profiles', $record);
 
