@@ -6,9 +6,9 @@
  */
 
 /**
- * Implements hook_default_linkit_profile()
+ * Implements hook_default_linkit_profiles()
  */
-function ndp_base_core_default_linkit_profile() {
+function ndp_base_core_default_linkit_profiles() {
   $linkit_profiles = array();
 
   $linkit_profile = new stdClass;
