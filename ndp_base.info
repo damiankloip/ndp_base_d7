@@ -50,4 +50,5 @@ dependencies[] = xmlsitemap
 dependencies[] = devel
 
 files[] = ndp_base.profile
+files[] = ndp_base.test
 
