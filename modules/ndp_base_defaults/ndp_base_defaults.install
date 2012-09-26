@@ -26,16 +26,20 @@ function ndp_base_defaults_install() {
  */
 function ndp_base_defaults_bam_profile_install() {
   // Add modified settings for default bam profile into db.
-  db_insert('backup_migrate_profiles')
-    ->fields(array(
-      'profile_id' => 'default',
-      'name' => 'Default settings',
-      'filename' => ' [site:name]',
-      'append_timestamp' => 1,
-      'timestamp_format' => 'Y-m-d\TH-i-s',
-      'filters' => serialize(_ndp_base_defaults_default_bam_filter_settings()),
-    ))
-    ->execute();
+  $record = (object) array(
+    'profile_id' => 'default',
+    'name' => 'Default settings',
+    'filename' => '[site:name]',
+    'append_timestamp' => 1,
+    'timestamp_format' => 'Y-m-d\TH-i-s',
+    'filters' => _ndp_base_defaults_default_bam_filter_settings(),
+  )
+
+  $save = drupal_write_record('backup_migrate_profiles', $record);
+
+  if ($save) {
+    watchdog('ndp_base_defaults', t('Backup migrate default profile saved'));
+  }
 }
 
 /**
@@ -401,5 +405,4 @@ function ndp_base_defaults_wysiwyg_ckeditor_profiles() {
         array('@format' => $record->format)));
     }
   }
-
 }
