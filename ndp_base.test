@@ -80,6 +80,42 @@ class NDPBaseWebTestCase extends DrupalWebTestCase {
   }
 
   /**
+   * Tests the custom date formats.
+   */
+  public function testDateFormat() {
+    $expected_formats = array(
+      array(
+        'type' => 'long',
+        'format' => 'l, jS F Y',
+        'locked' => 0,
+      ),
+      array(
+        'type' => 'medium',
+        'format' => 'jS F Y',
+        'locked' => 0,
+      ),
+      array(
+        'type' => 'short',
+        'format' => 'd/m/Y',
+        'locked' => 0,
+      ),
+    );
+
+    foreach ($expected_formats as $format) {
+      // Check for a result based on all the columns saved originally.
+      $query = db_select('date_formats', 'df')
+        ->fields('df', array('dfid'))
+        ->condition('format', $format['format'])
+        ->condition('type', $format['type'])
+        ->condition('locked', $format['locked']);
+      $result = $query->execute()->fetchField();
+      $this->assertTrue($result, format_string('Custom date format "@format" exists.', array('@format' => $format['format'])));
+    }
+  }
+
+  // @todo Test filter formats.
+
+  /**
    * Helper function to test a variable value matches an expected value.
    */
   protected function assertIdenticalVariable($variable_name, $expected_value) {
