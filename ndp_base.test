@@ -19,7 +19,51 @@ class NDPBaseWebTestCase extends DrupalWebTestCase {
     // Set the profile to the one we need.
     $this->profile = 'ndp_base';
 
+    $all_perms = module_invoke_all('permission');
+
+    //$this->adminUser = $this->drupalCreateUser(array_keys($all_perms));
+
+    drupal_flush_all_caches();
+
     parent::setUp();
+  }
+
+  /**
+   * Test the theme for the profile installation.
+   */
+  public function testTheme() {
+    //$this->drupalLogin($this->adminUser);
+
+    // Test the default theme has been set correctly.
+    $this->assertIdenticalVariable('theme_default', 'mainmodern');
+    // Tests the theme's status is enabled in the {system} table.
+    $status = db_query("SELECT status from {system} WHERE name = 'mainmodern'")->fetchField();
+    $this->assertTrue($status, 'The mainmodern theme has an enabled status.');
+
+    // Test the admin theme has been set correctly.
+    $this->assertIdenticalVariable('admin_theme', 'seven');
+    // Tests the theme's status is enabled in the {system} table.
+    $status = db_query("SELECT status from {system} WHERE name = 'seven'")->fetchField();
+    $this->assertTrue($status, 'The seven admin theme has an enabled status.');
+  }
+
+  /**
+   * Test any user related parts of the profile, such as user roles.
+   */
+  public function testUser() {
+    // Test roles and permissions.
+    $role = db_query("SELECT * from {role} WHERE name = 'administrator'")->fetchObject();
+    $this->assertTrue(is_object($role), 'Administrator role row object returned from the database.');
+    // Test this matches the user_admin_role variable.
+    $this->assertIdenticalVariable('user_admin_role', $role->rid);
+    // Test that user 1 has this role.
+    $user = user_load(1);
+    $this->assertTrue(in_array($role->rid, array_keys($user->roles)), 'User 1 has the admin role.');
+    // Test admin role have all permissions.
+    $all_perms = module_invoke_all('permission');
+    $admin_perms = db_query("SELECT permission from {role_permission} WHERE rid = :rid", array(':rid' => $role->rid))->fetchAllKeyed(0, 0);
+    // There should be no diff if all the same roles are present.
+    $this->assertFalse(array_diff(array_keys($all_perms), array_keys($admin_perms)));
   }
 
   /**
@@ -33,7 +77,7 @@ class NDPBaseWebTestCase extends DrupalWebTestCase {
       '@expected' => $expected_value,
       '@actual' => $actual_value,
     );
-    $message = format_string('Variable: @variable => @expected matches @actual', $tokens);
+    $message = format_string('Variable: @variable => @expected is correct', $tokens);
 
     $this->assertIdentical($expected_value, $actual_value, $message);
   }
