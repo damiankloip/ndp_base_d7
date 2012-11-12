@@ -128,6 +128,27 @@ function _ndp_base_defaults_contrib_variable_map() {
     'admin_menu_tweak_modules' => 1,
     'admin_menu_tweak_permissions' => 0,
     'admin_menu_tweak_tabs' => 0,
+    // EU cookie compliance
+    'eu_cookie_compliance_en' => array(
+      'popup_enabled' => 1,
+      'popup_position' => 1,
+      'popup_info' => array(
+        'value' => '<h2>We use cookies on this site to enhance your user experience</h2><p>By clicking any link on this page you are giving your consent for us to set cookies.</p>',
+        'format' => 'filtered_html',
+      ),
+      'popup_agreed_enabled' => 0,
+      'popup_hide_agreed' => 0,
+      'popup_agreed' => array(
+        'value' => '<h2>Thank you for accepting cookies</h2><p>You can now hide this message or find out more about cookies.</p>',
+        'format' => 'plain_text',
+      ),
+      'popup_link' => 'privacy-policy',
+      'popup_height' =>'',
+      'popup_width' => '100%',
+      'popup_delay' => 1,
+      'popup_bg_hex' => '0779BF',
+      'popup_text_hex' => 'ffffff',
+    ),
     // Honeypot.
     'honeypot_element_name' => 'homepage',
     'honeypot_form_comment_node_page_form' => 1,
